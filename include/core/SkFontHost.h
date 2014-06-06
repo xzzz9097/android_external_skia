@@ -122,9 +122,6 @@ private:
      */
     static SkTypeface* CreateTypefaceFromFile(const char path[]);
 
-    /** Clears the cache so that new fonts can be reloaded in */
-    static void ClearCache();
-
     ///////////////////////////////////////////////////////////////////////////
 
     friend class SkScalerContext;
