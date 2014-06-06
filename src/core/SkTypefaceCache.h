@@ -78,7 +78,6 @@ public:
     static SkTypeface* FindByID(SkFontID fontID);
     static SkTypeface* FindByProcAndRef(FindProc proc, void* ctx);
     static void PurgeAll();
-    static void PurgeAll(bool force);
 
     /**
      *  Debugging only: dumps the status of the typefaces in the cache
@@ -89,7 +88,7 @@ private:
     static SkTypefaceCache& Get();
 
     void purge(int count, bool force);
-    void purgeAll(bool force);
+    void purgeAll();
 
     struct Rec {
         SkTypeface*         fFace;
