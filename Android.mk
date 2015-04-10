@@ -606,8 +606,7 @@ LOCAL_SRC_FILES_arm += \
 	src/opts/S32A_Blend_BlitRow32_arm.S \
 	src/opts/S32A_D565_Opaque_arm.S \
 	src/opts/S32A_Opaque_BlitRow32_arm.S \
-	src/opts/memset16_neon.S \
-	src/opts/memset32_neon.S \
+	src/opts/SkUtils_opts_arm_neon.cpp \
 	src/opts/SkBitmapProcState_arm_neon.cpp \
 	src/opts/SkBitmapProcState_matrixProcs_neon.cpp \
 	src/opts/SkBlitMask_opts_arm_neon.cpp \
@@ -618,8 +617,7 @@ LOCAL_SRC_FILES_arm += \
 	src/opts/ext/S32_Opaque_D32_filter_DX_shaderproc_neon.cpp \
 	src/opts/D32_A8_Black_Neon.S \
 	src/core/asm/SkBlitter_RGB16_NEON.S \
-	src/opts/SkTextureCompression_opts_neon.cpp \
-	src/opts/D32_A8_Black_Neon.S
+	src/opts/SkTextureCompression_opts_neon.cpp
 
 LOCAL_CFLAGS_arm += \
 	-D__ARM_HAVE_NEON \
