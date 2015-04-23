@@ -600,10 +600,6 @@ LOCAL_SRC_FILES_arm += \
 
 ifeq ($(ARCH_ARM_HAVE_NEON), true)
 
-LOCAL_CFLAGS += -DNEON_BLITANTIH
-LOCAL_SRC_FILES += \
-	src/core/asm/SkBlitter_RGB16_NEON.S
-
 LOCAL_SRC_FILES_arm += \
 	src/opts/S32A_Opaque_BlitRow32_neon.S \
 	src/opts/S32A_Blend_BlitRow32_neon.S \
@@ -620,10 +616,12 @@ LOCAL_SRC_FILES_arm += \
 	src/opts/SkMorphology_opts_neon.cpp \
 	src/opts/SkXfermode_opts_arm_neon.cpp \
 	src/opts/ext/S32_Opaque_D32_filter_DX_shaderproc_neon.cpp \
-	src/opts/D32_A8_Black_Neon.S
+	src/opts/D32_A8_Black_Neon.S \
+	src/core/asm/SkBlitter_RGB16_NEON.S
 
 LOCAL_CFLAGS_arm += \
-	-D__ARM_HAVE_NEON
+	-D__ARM_HAVE_NEON \
+	-DNEON_BLITANTIH
 
 endif
 
