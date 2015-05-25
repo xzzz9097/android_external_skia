@@ -617,13 +617,10 @@ LOCAL_SRC_FILES_arm += \
 	src/opts/SkXfermode_opts_arm_neon.cpp \
 	src/opts/ext/S32_Opaque_D32_filter_DX_shaderproc_neon.cpp \
 	src/opts/D32_A8_Black_Neon.S \
-	src/core/asm/SkBlitter_RGB16_NEON.S \
 	src/opts/SkTextureCompression_opts_neon.cpp
 
 LOCAL_CFLAGS_arm += \
-	-D__ARM_HAVE_NEON \
-	-DNEON_BLITANTIH
-
+	-D__ARM_HAVE_NEON
 endif
 
 # Enable Neon assembler optimized version of S32A_Opaque_BlitRow32 and
